@@ -68,7 +68,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS,
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $calltouch = curl_exec ($ch);
 
-mail("vitya898989@gmail.com, vitya8989@mail.ru", "Окна Петербурга Стис", $fileContent, "From: mail@potolok-peter.ru");
+mail("kl@hl2b.ru", "Окна Петербурга Стис", $fileContent, "From: mail@potolok-peter.ru");
 
 //webform@okna-peter.ru, creative@okna-peter.ru
 
