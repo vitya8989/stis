@@ -19,13 +19,13 @@ $gifts = "\r\nПредпочитает следующие сверхспособ
 //защита от бота - ОТКЛ
 # if ($name == '') die('');
 
-/* $fileName = file_get_contents('../../bidsCopy/totalprice/num.txt'); */
+$fileName = file_get_contents('../../bidsCopy/totalprice/num.txt');
 
-/* date_default_timezone_set('Europe/Moscow');
-$fileNameDate = date('Y-m-d H:i:s'); */
+date_default_timezone_set('Europe/Moscow');
+$fileNameDate = date('Y-m-d H:i:s');
 
-/* $fileRoadName = "../../bids/file_".$fileName.".txt";
-$fileRoadNameCopy = "../../bidsCopy/file_".$fileName.".txt"; */
+$fileRoadName = "../../bids/file_".$fileName.".txt";
+$fileRoadNameCopy = "../../bidsCopy/file_".$fileName.".txt";
 
 if (!empty($_POST['where'])) {
     $fileContent = "DATE = ".$fileNameDate."\r\n"."Телефон для связи = ". $phone . $test1 . $test2 . $gifts;
@@ -35,7 +35,7 @@ if (!empty($_POST['where'])) {
     $fileContent = "DATE = ".$fileNameDate."\r\n"."Телефон для связи = ".$phone;
 }
 
-/* $fileBids = fopen($fileRoadName, "w+");
+$fileBids = fopen($fileRoadName, "w+");
 fwrite($fileBids, $fileContent);
 fclose($fileBids);
 
@@ -48,12 +48,12 @@ $fn = fopen("../../bidsCopy/totalprice/num.txt", "w+");
 settype($fileName, "float");
 $fileName = $fileName + 1;
 fwrite($fn, $fileName);
-fclose($fn); */
+fclose($fn);
 
 //Отправка в Calltouch
 
 //Вытаскиваем из куки call_value
-/* $CallValue =$_COOKIE['call_s']; //берём из куки строку
+$CallValue =$_COOKIE['call_s']; //берём из куки строку
 $FirstStr =strpos($CallValue,","); // находим позицию первой запятой
 $LastStr =strrpos($CallValue,","); // находим позицию следней запятой
 $CallValue = substr( $CallValue,$FirstStr +1,$LastStr - $FirstStr -1 ); //обрезаем строку оставляя только колл велью
@@ -66,7 +66,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS,
 "clientApiId=2142900543ctf2c5f6c71c8a0f8d3b182b4f2c0c3a27&fio=".urlencode($name)."&phoneNumber=".urlencode($phone)."&subject=".urlencode('Потолки Петербурга - Лэндинг Эконом')."".($CallValue != 'undefined' ? "&sessionId=".$CallValue : ""));
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$calltouch = curl_exec ($ch); */
+$calltouch = curl_exec ($ch);
 
 mail("vitya898989@gmail.com, vitya8989@mail.ru", "Окна Петербурга Стис", $fileContent, "From: mail@potolok-peter.ru");
 
