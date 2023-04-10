@@ -1,0 +1,134 @@
+.sale {
+  .block_form__content {
+    padding: 68px 0 64px;
+
+    @media ($desktop) {
+      padding: 60px 0 280px;
+    }
+    @media ($tablet3) {
+      padding: 40px 0 246px;
+    }
+  }
+  .block_form__form {
+    margin-top: 75px;
+    @media ($tablet3) {
+      margin-top: 0;
+      margin-bottom: -10px;
+    }
+  }
+  .block_form__left {
+    padding-left: 353px;
+    @media ($desktop) {
+      padding-left: 0;
+    }
+    @media ($tablet3) {
+      width: 100%;
+    }
+  }
+}
+.sale__date {
+  padding: 2px 10px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #213564;
+  border-radius: 2px;
+  width: max-content;
+
+  @media($desktopBig) {
+    font-size: 24px;
+  }
+
+  @media ($tablet3) {
+    font-size: 20px;
+    line-height: 130%;
+  }
+}
+.sale__title {
+  margin-top: 10px;
+
+  @media($desktopBig) {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  @media ($tablet3) {
+    margin-top: 15px;
+  }
+}
+.sale__text {
+  margin-top: 30px;
+
+  @media ($tablet3) {
+    margin-top: 20px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #1F1F1F;
+
+    @media ($tablet3) {
+      font-size: 15px;
+      line-height: 140%;
+      margin-bottom: 10px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.block_thanks__img_block.this--sale {
+  left: -10px;
+  @media ($desktopBig) {
+    left: -12px;
+  }
+  .block_thanks__img {
+    width: 380px;
+
+    @media ($desktopBig) {
+      width: 355px;
+    }
+    @media ($desktop) {
+      width: 240px;
+    }
+    @media ($tablet2) {
+      display: block;
+    }
+    @media ($tablet3) {
+      width: 210px;
+    }
+  }
+  .block_thanks__img_info {
+    padding: 20px 25px;
+    left: 0;
+    @media ($desktopBig) {
+      left: 0;
+    }
+    @media ($desktop) {
+      width: 360px;
+      left: 111px;
+    }
+    @media ($tablet2) {
+      display: block;
+    }
+    @media ($tablet3) {
+      width: 260px;
+      padding: 15px;
+      left: 101px;
+      .block_thanks__img_info_top {
+        font-size: 18px;
+        line-height: 130%;
+      }
+      .block_thanks__img_info_bottom {
+        font-size: 15px;
+        line-height: 140%;
+        margin-top: 10px;
+      }
+    }
+  }
+}

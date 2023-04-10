@@ -1,0 +1,123 @@
+.comfort {
+  background: linear-gradient(0deg, #E6F3FC, #E6F3FC), #FFFFFF;;
+}
+.comfort__row {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+
+  @media ($tablet2) {
+    flex-direction: column-reverse;
+  }
+  @media ($tablet3) {
+    margin-top: 30px;
+  }
+
+  &.this--reverse {
+    flex-direction: row-reverse;
+
+    @media ($tablet2) {
+      flex-direction: column-reverse;
+    }
+
+    .comfort__left {
+      margin-right: 0;
+      margin-left: 83px;
+
+      @media ($desktopBig) {
+        margin-left: 40px;
+      }
+      @media ($tablet2) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+.comfort__left_text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1F1F1F;
+  margin-top: 20px;
+
+  @media ($tablet3) {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 140%;
+  }
+}
+.comfort__left {
+  width: calc(57.15% - 83px);
+  margin-right: 83px;
+
+  @media ($desktopBig) {
+    width: calc(50% - 40px);
+    margin-right: 40px;
+  }
+  @media ($tablet2) {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 15px;
+  }
+  @media ($tablet3) {
+    margin-top: 10px;
+  }
+}
+.comfort__right {
+  width: 42.85%;
+
+  @media ($desktopBig) {
+    width: 50%;
+  }
+  @media ($tablet2) {
+    width: 100%;
+  }
+}
+.comfort__img {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 62.55%;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.comfort__img_text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 495px;
+  padding: 19px 20px 19px 40px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #1F1F1F;
+  background: #F5BF38;
+  border-radius: 18px 0 0 0;
+  min-height: 105px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%, 0 18px);
+
+
+  @media ($desktopSmall) {
+    font-size: 20px;
+    padding: 10px 10px 10px 20px;
+    width: 370px;
+    border-radius: 15px 0 0 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15px 100%, 0 18px);
+    min-height: 76px;
+  }
+
+  @media ($tablet3) {
+    font-size: 18px;
+    line-height: 130%;
+    padding: 7px 4px 7px 20px;
+    width: 330px;
+    min-height: 61px;
+  }
+}

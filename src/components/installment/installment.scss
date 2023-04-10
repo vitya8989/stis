@@ -1,0 +1,160 @@
+.installment {
+  .block_form__form {
+    margin-top: 12px;
+
+    @media ($tablet3) {
+      margin-top: 0;
+    }
+  }
+
+  .block_form__content {
+    padding: 131px 0 56px;
+
+    @media ($desktop) {
+      padding: 60px 0;
+    }
+    @media ($tablet3) {
+      padding: 40px 0;
+    }
+  }
+  .block_form__left {
+    padding-left: 0;
+  }
+  .block_form__right {
+    @media ($tablet3) {
+      margin-top: 30px;
+    }
+  }
+}
+.installment__items {
+  margin-top: 70px;
+  display: flex;
+  margin-left: -100px;
+
+  @media ($desktopSuperBig) {
+    margin-left: -50px;
+  }
+
+  @media ($desktop) {
+    display: block;
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: -35px;
+  }
+}
+.installment__item {
+  margin-left: 100px;
+  position: relative;
+
+  @media ($desktopSuperBig) {
+    margin-left: 50px;
+  }
+  @media ($desktop) {
+    margin-left: 0;
+    margin-bottom: 35px;
+  }
+
+  &:first-child {
+    .installment__item_shadow {
+      left: 84px;
+
+      @media ($desktopSuperBig) {
+        left: 79px;
+      }
+      @media ($tablet3) {
+        left: 36px;
+      }
+    }
+    .installment__item_title {
+      @media ($tablet3) {
+        font-size: 20px;
+        line-height: 130%;
+      }
+    }
+  }
+  &:last-child {
+    .installment__item_shadow {
+      left: 73px;
+
+      @media ($desktopSuperBig) {
+        left: 32px;
+      }
+
+      @media ($desktop) {
+        left: 20px;
+      }
+      @media ($tablet3) {
+        left: 36px;
+      }
+    }
+  }
+}
+.installment__item_title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 85%;
+  text-transform: uppercase;
+  color: #1F1F1F;
+
+  @media ($tablet3) {
+    font-size: 50px;
+    line-height: 80%;
+    text-transform: none;
+  }
+
+  span {
+    font-size: 80px;
+    line-height: 60px;
+
+    @media ($desktopSuperBig) {
+      font-size: 60px;
+    }
+    @media ($tablet3) {
+      font-size: 50px;
+      line-height: 80%;
+    }
+  }
+}
+.installment__item_text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1F1F1F;
+  margin-top: 20px;
+
+  @media ($desktop) {
+    margin-top: 16px;
+  }
+  @media ($tablet3) {
+    font-size: 15px;
+    line-height: 140%;
+  }
+}
+.installment__item_shadow {
+  font-weight: 600;
+  font-size: 120px;
+  line-height: 60px;
+  color: rgba(31, 31, 31, 0.1);
+  position: absolute;
+  left: 32px;
+  top: -32px;
+  white-space: nowrap;
+
+  @media ($desktopSuperBig) {
+    font-size: 80px;
+  }
+
+  @media ($desktopBig) {
+    font-size: 70px;
+  }
+
+  @media ($desktop) {
+    left: 20px;
+    top: -20px;
+  }
+  @media ($tablet3) {
+    left: 36px;
+    top: -27px;
+    font-size: 60px;
+  }
+}

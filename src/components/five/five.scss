@@ -1,0 +1,257 @@
+.five {
+  background: #ffffff;
+}
+.five__row {
+  margin-top: 50px;
+  display: flex;
+
+  @media ($tablet) {
+    margin-top: 30px;
+  }
+  @media ($tablet3) {
+    margin-top: 20px;
+  }
+}
+.five__tab_links {
+  width: 32.56%;
+
+  @media ($desktopBig) {
+    width: 37%;
+  }
+  @media ($desktop) {
+    width: 45%;
+  }
+  @media ($tablet) {
+    display: none;
+  }
+}
+.five__tab_link {
+  display: flex;
+  align-items: center;
+  border: 1px solid #63AFE2;
+  border-radius: 5px;
+  padding: 20px 67px 20px 30px;
+  position: relative;
+  margin-bottom: 10px;
+  transition: border 0.25s, background 0.25s;
+
+  &:hover {
+    @media #{$mouse-device} {
+      border: 1px solid #213564;
+    }
+  }
+
+  @media ($desktop) {
+    padding: 15px 57px 15px 20px;
+  }
+
+  @media ($tablet) {
+    cursor: pointer;
+  }
+  @media ($tablet3) {
+    padding: 10px 54px 10px 15px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &.active {
+    background: #213564;
+    border: 1px solid #213564;
+    pointer-events: none;
+
+    .five__tab_link_num {
+      color: #63AFE2;
+    }
+    .five__tab_link_title {
+      color: #FFFFFF;
+    }
+    @media ($tablet) {
+      pointer-events: auto;
+      .five__tab_link_arrow {
+        transform: rotate(180deg);
+        svg {
+          path {
+            stroke: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  &.this--mob {
+    display: none;
+
+    @media ($tablet) {
+      display: flex;
+      margin-bottom: 0;
+    }
+  }
+}
+.five__tab_link_num {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 140%;
+  color: #F5BF38;
+  transition: color 0.25s;
+  width: 20px;
+
+  @media ($tablet3) {
+    width: 15px;
+    font-size: 22px;
+    line-height: 120%;
+  }
+}
+.five__tab_link_title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #213564;
+  margin-left: 20px;
+  transition: color 0.25s;
+
+  @media ($tablet3) {
+    font-size: 18px;
+    line-height: 130%;
+    margin-left: 10px;
+  }
+}
+.five__tab_link_arrow {
+  position: absolute;
+  top: calc(50% - 14px);
+  right: 30px;
+  width: 17px;
+  height: 28px;
+
+  @media ($tablet) {
+    transition: transform 0.25s;
+  }
+  @media ($tablet3) {
+    width: 12px;
+    height: 19px;
+    right: 15px;
+    top: calc(50% - 9.5px);
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    @media ($tablet) {
+      transform: rotate(90deg);
+      path {
+        stroke: #213564;
+        transition: stroke 0.25s;
+      }
+    }
+  }
+
+}
+.five__tabs {
+  margin-left: 62px;
+  width: calc(67.44% - 62px);
+
+  @media ($desktopBig) {
+    width: calc(63% - 30px);
+    margin-left: 30px;
+  }
+
+  @media ($desktop) {
+    width: calc(55% - 30px);
+  }
+
+  @media ($tablet) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.five__tab {
+  display: none;
+
+  @media ($tablet) {
+    display: block;
+    margin-bottom: 15px;
+  }
+  @media ($tablet3) {
+    margin-bottom: 10px;
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
+.five__tab_row {
+  display: flex;
+
+  @media ($desktop) {
+    display: block;
+  }
+  @media ($tablet) {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s;
+  }
+}
+.five__tab_left {
+  width: 42.44%;
+  @media ($desktop) {
+    width: 300px;
+  }
+  @media ($tablet) {
+     margin-top: 20px;
+  }
+  @media ($tablet3) {
+    margin-top: 10px;
+    width: 187px;
+  }
+}
+.five__tab_right {
+  width: calc(57.56% - 62px);
+  margin-left: 62px;
+
+  @media ($desktopBig) {
+    width: calc(57.56% - 30px);
+    margin-left: 30px;
+  }
+  @media ($desktop) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 25px;
+  }
+  @media ($tablet) {
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  @media ($tablet3) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.five__tab_img {
+  position: relative;
+  padding-top: 134.76%;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.five__tab_title {
+  color: #213564;
+}
+.five__tab_text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1F1F1F;
+  margin-top: 20px;
+
+  @media ($tablet3) {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 140%;
+  }
+}

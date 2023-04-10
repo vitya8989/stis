@@ -1,0 +1,39 @@
+.h2_title {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 60px;
+  color: #213564;
+
+  @media ($desktop) {
+    font-size: 40px;
+  }
+  @media ($tablet3) {
+    font-size: 26px;
+    line-height: 120%;
+  }
+}
+
+.h3_title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 140%;
+  color: #1F1F1F;
+
+  @media ($tablet3) {
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+}
+
+.h4_title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 140%;
+  text-transform: uppercase;
+
+  @media ($tablet3) {
+    font-size: 20px;
+    line-height: 130%;
+  }
+}

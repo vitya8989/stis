@@ -1,0 +1,510 @@
+.qwiz__form {
+  padding: 60px 0 48px;
+  background: #F5BF38;
+
+  @media ($tablet3) {
+    padding: 40px 0;
+  }
+}
+.qwiz__row {
+  display: flex;
+
+  @media ($desktop) {
+    display: block;
+  }
+}
+.qwiz__left {
+  width: calc(100% - 620px);
+
+  @media ($desktopBig) {
+    width: calc(100% - 420px);
+  }
+  @media ($desktop) {
+    width: 100%;
+  }
+}
+.qwiz__right {
+  margin-left: 90px;
+  flex: 0 0 auto;
+  width: 530px;
+
+  @media ($desktopBig) {
+    width: 380px;
+    margin-left: 40px;
+  }
+  @media ($desktop) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+}
+.qwiz__content {
+  margin-top: 30px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 30px;
+  display: none;
+
+  @media ($desktop) {
+    padding: 20px;
+  }
+  @media ($tablet3) {
+    padding: 20px 15px;
+    margin-top: 20px;
+  }
+
+  &.active {
+    display: block;
+  }
+}
+.qwiz__count {
+  display: flex;
+  align-items: center;
+}
+.qwiz__count_text {
+  margin-right: 15px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1F1F1F;
+
+  @media ($tablet3) {
+    font-size: 15px;
+    line-height: 140%;
+  }
+}
+.qwiz__count_line {
+  width: 400px;
+  height: 20px;
+  position: relative;
+  border: 1px solid #63AFE2;
+  border-radius: 5px;
+  overflow: hidden;
+
+  @media ($tablet3) {
+    height: 15px;
+    width: 193px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #63AFE2;
+  }
+
+  &.this--33 {
+    &::after {
+      width: 33.333%;
+    }
+  }
+  &.this--66 {
+    &::after {
+      width: 66.666%;
+    }
+  }
+  &.this--100 {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+.qwiz__question {
+  margin-top: 15px;
+
+  &.this--mt_0 {
+    margin-top: 0;
+  }
+}
+.qwiz__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1F1F1F;
+  margin-top: 15px;
+
+  @media ($tablet3) {
+    font-size: 15px;
+    line-height: 140%;
+  }
+}
+.qwiz__inputs {
+  margin-top: 20px;
+
+  &.this--flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -60px;
+    margin-bottom: -15px;
+
+    @media ($tablet3) {
+      margin-left: 0;
+    }
+
+    .qwiz__input {
+      margin-left: 60px;
+      width: calc(50% - 60px);
+
+      @media ($tablet3) {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+.qwiz__input {
+  margin-bottom: 15px;
+  input {
+    display: none;
+  }
+
+  label {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #1F1F1F;
+    padding-left: 35px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    @media ($tablet3) {
+      font-size: 15px;
+      line-height: 140%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1.5px;
+      width: 25px;
+      height: 25px;
+      border: 2px solid #63AFE2;
+      @media ($tablet3) {
+        top: -2px;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s, visibility 0.25s;
+    }
+  }
+
+  input:checked + label {
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &.this--radio {
+    label {
+      &::before {
+        border-radius: 50%;
+      }
+      &::after {
+        left: 6px;
+        top: 7.5px;
+        border-radius: 50%;
+        width: 13px;
+        height: 13px;
+        background: #63AFE2;
+
+        @media ($tablet3) {
+          top: 4px;
+        }
+      }
+    }
+  }
+  &.this--checkbox {
+    label {
+      &::after {
+        width: 25px;
+        height: 25px;
+        left: 0;
+        top: 1.5px;
+        background: url("data:image/svg+xml,%3Csvg width='18' height='11' viewBox='0 0 18 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5L7.5 10L16.5 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center / 18px 11px no-repeat,#63AFE2;
+
+        @media ($tablet3) {
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+.qwiz__btns {
+  display: flex;
+  margin-left: -10px;
+  margin-top: 20px;
+  max-width: 620px;
+  @media ($tablet3) {
+    margin-left: 0;
+    flex-direction: column;
+    max-width: none;
+  }
+}
+.qwiz__btn {
+  width: calc(50% - 10px);
+  margin-left: 10px;
+  font-size: 20px;
+  line-height: 140%;
+
+  @media ($tablet3) {
+    border-radius: 2px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.this--next {
+    svg {
+      width: 13px;
+      height: 20px;
+      margin-left: 20px;
+      margin-top: 2px;
+      flex: 0 0 auto;
+
+      @media ($tablet3) {
+        margin-top: 0;
+      }
+    }
+
+    &.disabled {
+      background: #E3E3E3;
+      pointer-events: none;
+    }
+
+    &.this--400 {
+      width: 400px;
+
+      @media ($mobileMiddle) {
+        width: 100%;
+      }
+    }
+  }
+  &.this--prev {
+    svg {
+      width: 13px;
+      height: 20px;
+      margin-right: 20px;
+      margin-top: 2px;
+      flex: 0 0 auto;
+
+      @media ($tablet3) {
+        margin-top: 0;
+      }
+
+      path {
+        transition: stroke 0.25s;
+      }
+    }
+
+    &:hover {
+      @media #{$mouse-device} {
+        svg {
+          path {
+            stroke: #ffffff;
+          }
+        }
+      }
+    }
+    &:active {
+      svg {
+        path {
+          stroke: #ffffff!important;
+        }
+      }
+    }
+  }
+}
+.qwiz__discount {
+  margin-left: 90px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 15px 20px;
+
+  @media ($desktopBig) {
+    margin-left: 0;
+  }
+}
+.qwiz__discount_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.qwiz__discount_top_text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #1F1F1F;
+
+  @media ($desktopBig) {
+    font-size: 22px;
+  }
+
+  @media ($tablet3) {
+    font-size: 18px;
+    line-height: 130%;
+  }
+}
+.qwiz__discount_value {
+  padding: 0 10px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #FFFFFF;
+  background: #213564;
+  border-radius: 2px;
+  margin-left: 10px;
+
+  @media ($tablet3) {
+    font-size: 18px;
+    line-height: 130%;
+    padding: 2px 10px 0;
+  }
+}
+.qwiz__discount_bottom {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1F1F1F;
+  margin-top: 5px;
+
+  @media ($tablet3) {
+    font-size: 15px;
+    line-height: 140%;
+  }
+}
+.qwiz__info {
+  margin-top: 67px;
+  display: flex;
+
+  @media ($desktopBig) {
+    margin-top: 30px;
+    display: block;
+  }
+  @media ($tablet3) {
+    margin-top: 20px;
+  }
+}
+.qwiz__info_img {
+  margin-right: 20px;
+  width: 70px;
+  height: 70px;
+  flex: 0 0 auto;
+
+  @media ($desktopBig) {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.qwiz__info_item {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+
+  @media ($desktopBig) {
+    padding: 15px;
+  }
+  @media ($tablet3) {
+    padding: 15px 20px;
+  }
+}
+.qwiz__info_title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #213564;
+
+  @media ($tablet3) {
+    font-size: 15px;
+    line-height: 140%;
+  }
+}
+.qwiz__info_subtitle {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #1F1F1F;
+  margin-top: 5px;
+  @media ($tablet3) {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 2px;
+  }
+}
+.qwiz__info_text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1F1F1F;
+  margin-top: 10px;
+
+  @media ($tablet3) {
+    font-size: 15px;
+    line-height: 140%;
+  }
+}
+.qwiz__info_wa {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1F1F1F;
+
+  @media ($tablet3) {
+    font-size: 15px;
+    line-height: 140%;
+  }
+}
+.qwiz__info_wa_link {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: #1B2234;
+  display: block;
+  width: max-content;
+  margin-top: 5px;
+  transition: color 0.25s;
+
+  @media ($tablet3) {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  &:hover {
+    @media #{$mouse-device} {
+      color: #63AFE2;
+    }
+  }
+  &:active {
+    color: #59A4D6!important;
+  }
+}
+.qwiz__tel_input {
+  border: 1px solid #213564;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.qwiz__special {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #1F1F1F;
+  margin-top: 20px;
+}

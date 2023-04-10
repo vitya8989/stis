@@ -1,0 +1,265 @@
+.works {
+  background: #ffffff;
+}
+.works__slider_box {
+  position: relative;
+  margin-top: 50px;
+  padding-bottom: 55px;
+
+  @media ($tablet) {
+    margin-top: 30px;
+  }
+  @media ($tablet3) {
+    padding-bottom: 36px;
+  }
+}
+.works__slider_prev,
+.works__slider_next {
+  position: absolute;
+  top: -118px;
+  width: 57px;
+  height: 68px;
+  background: #FFFFFF;
+  border: 2px solid #F5BF38;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s, border-color 0.25s;
+
+  @media ($tablet) {
+    top: -98px;
+  }
+
+  @media ($tablet3) {
+    display: none;
+  }
+
+  svg {
+    path {
+      transition: stroke 0.25s;
+    }
+  }
+
+  &.swiper-button-disabled {
+    pointer-events: none;
+    border: 2px solid #E3E3E3;
+  }
+
+  &:hover {
+    @media #{$mouse-device} {
+      background: #F5BF38;
+      border-color: #F5BF38;
+
+      svg {
+        path {
+          stroke: #ffffff;
+        }
+      }
+    }
+  }
+
+  &:active {
+    background: #E7B333!important;
+    border-color: #F5BF38!important;
+
+    svg {
+      path {
+        stroke: #ffffff!important;
+      }
+    }
+  }
+}
+.works__slider_prev {
+  right: 67px;
+  svg {
+    transform: rotate(180deg);
+  }
+}
+.works__slider_next {
+  right: 0;
+}
+.works__slider_pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #213564;
+  }
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background: #C6C6C6;
+    opacity: 1;
+
+    @media ($tablet3) {
+      width: 4px;
+      height: 4px;
+    }
+  }
+
+}
+.works_slide.swiper-slide {
+  height: auto;
+}
+.works_slide__row {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  @media ($tablet) {
+    flex-direction: column;
+  }
+}
+.works_slide__left {
+  width: 58.14%;
+
+  @media ($desktopBig) {
+    width: 45%;
+  }
+  @media ($tablet) {
+    width: 100%;
+  }
+}
+.works_slide__img {
+  position: relative;
+  padding-top: 60%;
+  border-radius: 5px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+.works_slide__right {
+  width: calc(41.86% - 60px);
+  margin-left: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media ($desktopBig) {
+    margin-left: 30px;
+    width: calc(55% - 30px);
+  }
+  @media ($tablet) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+    flex: 1 1 auto;
+  }
+  @media ($tablet3) {
+    margin-top: 15px;
+  }
+}
+.works_slide__title {
+  color: #213564;
+}
+.works_slide__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #636363;
+  margin-top: 40px;
+
+  @media ($tablet) {
+    margin-top: 20px;
+  }
+  @media ($tablet3) {
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 140%;
+  }
+}
+.works_slide__author {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #1F1F1F;
+  margin-top: 20px;
+
+  @media ($tablet3) {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 130%;
+  }
+}
+.works_slide__form {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-bottom: -10px;
+
+  @media ($tablet) {
+    margin-top: 20px;
+  }
+  @media ($tablet3) {
+    margin-left: 0;
+  }
+}
+.works_slide__form_input {
+  width: calc(50% - 15px);
+  margin-left: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #213564;
+
+  @media ($tablet3) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+.works_slide__form_submit {
+  width: calc(50% - 15px);
+  margin-left: 15px;
+  margin-bottom: 10px;
+
+  @media ($tablet3) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+.works_slide__form_agree {
+  width: calc(100% - 15px);
+  margin-bottom: 10px;
+  margin-left: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  color: #1F1F1F;
+
+  @media ($tablet3) {
+    font-size: 15px;
+    line-height: 140%;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  a {
+    color: #1F1F1F;
+    display: inline-block;
+    border-bottom: 1px solid #1F1F1F;
+    transition: color 0.25s, border 0.25s;
+    &:hover {
+      @media #{$mouse-device} {
+        color: #63AFE2;
+        border-bottom: 1px solid #63AFE2;
+      }
+    }
+    &:active {
+      color: #59A4D6!important;
+      border-bottom: 1px solid #59A4D6!important;
+    }
+  }
+
+}

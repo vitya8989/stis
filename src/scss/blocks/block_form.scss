@@ -1,0 +1,124 @@
+.block_form {
+  background: #F5BF38;
+}
+.block_form__content {
+  display: flex;
+  padding: 105px 0;
+  position: relative;
+  min-height: 500px;
+
+  @media ($desktopBig) {
+    padding: 60px 0;
+  }
+  @media ($desktop) {
+    padding: 60px 0 280px;
+  }
+  @media ($tablet3) {
+    padding: 40px 0 246px;
+    flex-direction: column;
+  }
+}
+.block_form__left {
+  width: calc(100% - 440px);
+  padding-left: 410px;
+
+  @media ($desktopBig) {
+    width: calc(100% - 350px);
+    padding-left: 365px;
+  }
+  @media ($desktop) {
+    padding-left: 0;
+  }
+  @media ($tablet3) {
+    width: 100%;
+  }
+}
+.block_form__right {
+  width: 400px;
+  flex: 0 0 auto;
+  margin-left: 40px;
+
+  @media ($desktopBig) {
+    width: 310px;
+  }
+  @media ($tablet3) {
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 0;
+  }
+}
+.block_form__form {
+  margin-top: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -20px;
+
+  @media ($tablet3) {
+    margin-top: 0;
+    margin-bottom: -10px;
+  }
+}
+.block_form__title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #1F1F1F;
+  margin-bottom: 20px;
+  width: 100%;
+
+  @media ($desktopBig) {
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  @media ($tablet3) {
+    margin-bottom: 15px;
+  }
+}
+.block_form__input {
+  margin-bottom: 20px;
+  width: 100%;
+  @media ($tablet3) {
+    margin-bottom: 10px;
+  }
+}
+.block_form__submit {
+  margin-bottom: 20px;
+  width: 100%;
+  @media ($tablet3) {
+    margin-bottom: 10px;
+  }
+}
+.block_form__agree {
+  margin-bottom: 20px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  color: #1F1F1F;
+  text-align: center;
+
+  @media ($tablet3) {
+    font-size: 15px;
+    line-height: 140%;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: #1F1F1F;
+    display: inline-block;
+    border-bottom: 1px solid #1F1F1F;
+    transition: color 0.25s, border 0.25s;
+
+    &:hover {
+      @media #{$mouse-device} {
+        color: #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+      }
+    }
+    &:active {
+      color: #F6E0A0!important;
+      border-bottom: 1px solid #F6E0A0!important;
+    }
+  }
+}

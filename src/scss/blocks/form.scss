@@ -1,0 +1,35 @@
+.tel-input {
+  padding: 15px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  background: #FFFFFF;
+  border-radius: 2px;
+  transition: border 0.25s;
+  border: 1px solid #ffffff;
+
+  @media ($tablet3) {
+    font-size: 18px;
+    line-height: 130%;
+    padding: 13px 15px;
+  }
+
+  &::placeholder {
+    color: rgba(28, 28, 28, 0.5);
+  }
+  &:focus {
+    border: 1px solid #213564!important;
+  }
+
+  &.error {
+    border: 1px solid #BC0000;
+    background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4733 14.8919H10.9752L10.569 6.29297H12.8795L12.4733 14.8919ZM10.4674 17.6172C10.4674 17.1545 10.5859 16.8301 10.8229 16.6439C11.0655 16.452 11.3617 16.3561 11.7115 16.3561C12.0557 16.3561 12.3491 16.452 12.5918 16.6439C12.8344 16.8301 12.9557 17.1545 12.9557 17.6172C12.9557 18.0686 12.8344 18.3958 12.5918 18.599C12.3491 18.7964 12.0557 18.8952 11.7115 18.8952C11.3617 18.8952 11.0655 18.7964 10.8229 18.599C10.5859 18.3958 10.4674 18.0686 10.4674 17.6172Z' fill='%23D93333'/%3E%3Crect x='1' y='1' width='22' height='22' rx='11' stroke='%23D93333' stroke-width='2'/%3E%3C/svg%3E") calc(100% - 18px) center / 24px 24px no-repeat,#FFFFFF;
+  }
+
+  &:hover {
+    @media #{$mouse-device} {
+      border: 1px solid #63AFE2;
+    }
+  }
+}

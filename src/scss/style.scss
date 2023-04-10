@@ -1,0 +1,100 @@
+@import "null";
+@import "variables";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@import "fonts";
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: Greenwich, sans-serif;
+	font-weight: 400;
+	color: #000000;
+	background: #ffffff;
+
+	&.this--overflow {
+		overflow: hidden;
+	}
+}
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	max-width: 1760px;
+	margin: 0 auto;
+	padding: 0 20px;
+
+	@media ($desktopSmall) {
+		padding: 0 15px;
+	}
+}
+main {
+	flex: 1 0 auto;
+	background: #ffffff;
+}
+
+.section {
+	padding: 80px 0;
+	background: #ffffff;
+	@media ($desktopBig) {
+		padding: 60px 0;
+	}
+	@media ($desktopSmall) {
+		padding: 40px 0;
+	}
+	&.this--top {
+		padding-bottom: 0;
+	}
+	&.this--bottom {
+		padding-top: 0;
+	}
+}
+
+@import "./blocks/btn";
+@import "./blocks/form";
+@import "./blocks/title";
+@import "./blocks/block_thanks";
+@import "./blocks/block_form";
+
+@import "../components/header/header";
+@import "../components/footer/footer";
+@import "../components/callback_popup/callback_popup";
+@import "../components/top/top";
+@import "../components/quality/quality";
+@import "../components/directly/directly";
+@import "../components/qwiz/qwiz";
+@import "../components/more/more";
+@import "../components/know_size/know_size";
+@import "../components/five/five";
+@import "../components/comfort/comfort";
+@import "../components/sale/sale";
+@import "../components/where/where";
+@import "../components/installment/installment";
+@import "../components/works/works";
+@import "../components/reviews/reviews";
+@import "../components/ask/ask";
+@import "../components/video/video";
+@import "../components/map/map";
+
+.hidden {
+	display: none;
+}
+#policy {
+	max-width: 600px;
+
+	h4 {
+		margin-bottom: 20px;
+	}
+}

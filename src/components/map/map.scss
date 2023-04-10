@@ -1,0 +1,119 @@
+.map {
+  background: #ffffff;
+}
+.map__subtitle {
+  color: #1F1F1F;
+  margin-top: 20px;
+
+  @media ($tablet3) {
+    margin-top: 20px;
+  }
+}
+.map__wrapper {
+  margin-top: 50px;
+  position: relative;
+  height: 600px;
+  @media ($desktop) {
+    height: auto;
+  }
+}
+.map__map {
+  width: 100%;
+  height: 100%;
+  @media ($desktop) {
+    height: 470px;
+  }
+}
+.map__card {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 25px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 30px rgba(9, 11, 44, 0.05);
+  border-radius: 5px;
+  width: 400px;
+
+  @media ($desktop) {
+    position: static;
+    width: auto;
+  }
+}
+.map__card_info {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+
+  @media ($tablet3) {
+    margin-top: 20px;
+  }
+}
+.map__card_mail {
+  padding-left: 40px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #1F1F1F;
+  transition: color 0.25s;
+  background: url("data:image/svg+xml,%3Csvg width='25' height='26' viewBox='0 0 25 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23 6L12.5 16.3448L2 6M23 6L2 6M23 6V21M2 6V21M23 21L15.125 14.2759M23 21H2M2 21L9.875 14.2759' stroke='%23213564' stroke-width='0.8'/%3E%3C/svg%3E ") left center / 25px 25px no-repeat;
+
+  @media ($tablet3) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &:hover {
+    @media #{$mouse-device} {
+      color: #63AFE2;
+    }
+  }
+  &:active {
+    color: #59A4D6!important;
+  }
+}
+.map__card_time {
+  margin-top: 20px;
+  padding-left: 40px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #1F1F1F;
+  background: url("data:image/svg+xml,%3Csvg width='25' height='26' viewBox='0 0 25 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5 24C6.4347 24 1.5 19.0653 1.5 13C1.5 6.9347 6.4347 2 12.5 2C18.5653 2 23.5 6.9347 23.5 13C23.5 19.0653 18.5653 24 12.5 24ZM12.5 3.15789C7.0732 3.15789 2.65789 7.5732 2.65789 13C2.65789 18.4268 7.0732 22.8421 12.5 22.8421C17.9268 22.8421 22.3421 18.4268 22.3421 13C22.3421 7.5732 17.9268 3.15789 12.5 3.15789Z' fill='%23213564'/%3E%3Cpath d='M9.37402 16.7049C9.22589 16.7049 9.0776 16.6484 8.96469 16.5353C8.73854 16.3093 8.73854 15.9426 8.96469 15.7166L11.9215 12.7597V6.34164C11.9215 6.0218 12.1806 5.7627 12.5004 5.7627C12.8202 5.7627 13.0794 6.0218 13.0794 6.34164V12.9995C13.0794 13.1532 13.0185 13.3003 12.9097 13.4089L9.78334 16.5353C9.67042 16.6483 9.52215 16.7049 9.37402 16.7049Z' fill='%23213564'/%3E%3C/svg%3E%0A") left center / 25px 25px no-repeat;
+  @media ($tablet3) {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 15px;
+  }
+}
+.map__card_tel {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #213564;
+  transition: color 0.25s;
+  margin-top: 20px;
+
+  @media ($tablet3) {
+    font-size: 20px;
+    line-height: 130%;
+    margin-top: 15px;
+  }
+  &:hover {
+    @media #{$mouse-device} {
+      color: #63AFE2;
+    }
+  }
+  &:active {
+    color: #59A4D6!important;
+  }
+}
+.map__card_bottom {
+  @media ($desktop) {
+    margin-top: 20px;
+  }
+}
