@@ -1,5 +1,8 @@
 .reviews {
   background: #E6F3FC;
+  @media ($tablet3) {
+    overflow: hidden;
+  }
 }
 .reviews__slider_box {
   margin-top: 50px;
@@ -15,10 +18,18 @@
 }
 .reviews_slider {
   overflow: hidden;
+  @media ($tablet3) {
+    overflow: visible;
+  }
+}
+.reviews_slide.swiper-slide {
+  @media ($tablet3) {
+    width: 335px;
+  }
 }
 .reviews_slide__img {
   position: relative;
-  padding-top: 107.74%;
+  padding-top: 150%;
 
   img {
     position: absolute;

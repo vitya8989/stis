@@ -1107,16 +1107,16 @@ main {
   position: relative;
   border: 1px solid #63AFE2;
   border-radius: 5px;
-  overflow: hidden;
 }
 
 .qwiz__count_line::after {
   content: '';
   position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
+  height: calc(100% + 2px);
+  left: -1px;
+  top: -1px;
   background: #63AFE2;
+  border-radius: 5px;
 }
 
 .qwiz__count_line.this--33::after {
@@ -1128,7 +1128,7 @@ main {
 }
 
 .qwiz__count_line.this--100::after {
-  width: 100%;
+  width: calc(100% + 2px);
 }
 
 .qwiz__question {
@@ -2339,7 +2339,7 @@ main {
 
 .reviews_slide__img {
   position: relative;
-  padding-top: 107.74%;
+  padding-top: 150%;
 }
 
 .reviews_slide__img img {
@@ -4736,8 +4736,20 @@ main {
     width: 100%;
   }
 
+  .reviews {
+    overflow: hidden;
+  }
+
   .reviews__slider_box {
     padding-bottom: 36px;
+  }
+
+  .reviews_slider {
+    overflow: visible;
+  }
+
+  .reviews_slide.swiper-slide {
+    width: 335px;
   }
 
   .reviews__slider_pagination.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
