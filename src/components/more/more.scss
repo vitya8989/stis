@@ -6,7 +6,7 @@
   margin-top: 50px;
   position: relative;
   @media ($tablet2) {
-    padding-bottom: 26px;
+    padding-bottom: 46px;
   }
   @media ($tablet3) {
     margin-top: 20px;
@@ -88,8 +88,8 @@
       background: #213564;
     }
     .swiper-pagination-bullet {
-      width: 4px;
-      height: 4px;
+      width: 12px;
+      height: 12px;
       margin: 0 5px;
       background: #C6C6C6;
       opacity: 1;

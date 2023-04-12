@@ -112,6 +112,13 @@
     color: #59A4D6!important;
   }
 }
+.map__card_text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #1F1F1F;
+  margin-top: 10px
+}
 .map__card_bottom {
   @media ($desktop) {
     margin-top: 20px;

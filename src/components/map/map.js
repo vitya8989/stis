@@ -2,7 +2,8 @@ if (document.getElementById("map")) {
     ymaps.ready(function () {
         var map = new ymaps.Map(document.getElementById("map"), {
             center: [59.970113007741, 30.375625058352],
-            zoom: 9
+            zoom: 9,
+            controls: ['zoomControl'],
         });
         // —оздаем инстанцию геометрии многоугольника (указываем координаты вершин контуров).
         var polygonGeometry = new ymaps.Polygon([[
